@@ -332,7 +332,7 @@ function submitPassword() {
     closeModal();
     const riktigpin = 170506;
     if (parseInt(password) === riktigpin) {
-        window.location.href = "./sider/administrasjon.html";
+        window.location.href = "https://jacobdahlback.github.io/Georigs_handleliste/sider/administrasjon.html";
     } else {
         console.log("Feil passord");
         // Clear the input field
