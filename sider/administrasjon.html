@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrasjon</title>
+    <link rel="stylesheet" href="../stil.css">
+</head>
+
+<body>
+    <style>
+        body{
+            width: 400px;
+        }
+        #søk{
+            margin-left: 20px;
+        }
+        
+
+    </style>
+    <div class="topp">
+        <div id="søk">
+            <label for="searchInput">Søk etter kjøper:</label>
+            <input type="text" id="searchInput" oninput="searchUtsjekker()">
+        </div>
+        <a href="../index.html">Handel</a>
+        <img src="../bilder/JS50.png">
+    </div>
+    
+    <div class="resultat">
+        <div id="administrasjon-liste"></div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

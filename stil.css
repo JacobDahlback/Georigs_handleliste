@@ -1,0 +1,244 @@
+.topp{
+    overflow: hidden;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.topp img{
+    width: 70px;
+    padding-left: 20px;
+}
+
+.topp a{
+    padding-left: 20px;
+}
+
+.bunn{
+    background-color: #f2f2f2;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info h4{
+    margin-right: 10px;
+}
+
+.meny{
+    
+    width: 70px;
+    height: 70px;
+    padding-left: 0px;
+    left: 0px;
+
+}
+
+.meny img:hover{
+    background-color: #d5d5d5;
+}
+
+.meny img{
+    float: right;
+    display: block;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+}
+
+#meny_handlekurv{
+    height: 60px;
+    width: 60px;
+    padding-top: 0px;
+}
+
+#meny_handlekurv img{
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.meny a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding-top: 25px;
+}
+
+.til_salg{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.varer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 3px solid #000;
+    width: 400px;
+    height: 350px;
+    margin: 10px;
+}
+
+#redbull{
+    width: 90px;
+}
+
+#redbull_rød{
+    width: 100px;
+}
+
+#cookies{
+    height: 90px;
+    width: 200px;
+    margin-top: 60px;
+}
+
+#rosa{
+    margin-left: 40px;
+    width: 90px;
+}
+
+#hvit_monster{
+    height: 200px;
+    width: 180px;
+}
+
+#fruktsmak{
+    margin-left: 40px;
+    width: 80px;
+}
+
+.item_hoved {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+.item_hoved img {
+    width: 200px;
+}
+
+.sidemeny{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #000;
+    height: 330px;
+    padding: 10px;
+}
+
+.sidemeny img {
+    width: 55px;
+}
+
+.pris{
+    height: 70px;
+    padding-top: 5px;
+}
+
+.kjøpeknapp {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.kjøpeknapp img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#handlekurv-liste img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+#handlekurv-segment {
+    position: fixed;
+    top: 0;
+    left: -340px;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    z-index: 1;
+    padding: 20px;
+}
+
+#handlekurv-liste {
+    padding: 20px;
+}
+
+#administrasjon-liste{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

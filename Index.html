@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Georgis handleliste</title>
+    <link rel="stylesheet" href="./stil.css">
+    <link rel="icon" type="x-icon" href="./bilder/JS50.png">
+</head>
+<body>
+    <style>
+        body {
+            height: 2000px;
+        }
+    </style>
+    <div class="topp">
+        <div id="hemmelig" onclick="showPrompt()">
+            <img src="./bilder/hemmelig.png">
+        </div>
+        <div class="meny" onclick="toggleHandlekurvSegment()">
+            <img src="./bilder/handle_kurv_ikon.png">
+        </div>
+        <img src="./bilder/JS50.png">
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <label for="password">Passord:</label>
+            <input type="password" id="password">
+            <button type="button" onclick="submitPassword()">Submit</button>
+        </div>
+    </div>
+
+    <div id="handlekurv-segment">
+        <h2>Handlekurv</h2>
+        <button onclick="clearHandlekurv()">Clear</button>
+        <p id="pris_sum"></p>
+        <div id="handlekurv-liste"></div>
+        <button onclick="leggTilCustomItem()">Legg til custom item</button>
+        <button onclick="utsjekk()">Sjekk ut</button>
+    </div>
+
+    <div class="til_salg">
+        <div class="varer">
+            <!-- Item 1 -->
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Cookies</h2>
+                    <img id="cookies" src="./bilder/cookies.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>27 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(0)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Monster <br>(White)</h2>
+                    <img id="hvit_monster" src="./bilder/monster_hvit.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>26 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(1)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Monster <br>(Fiesta Mango)</h2>
+                    <img src="./bilder/monster_blå.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>26 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(2)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Monster <br>(Paradise)</h2>
+                    <img src="./bilder/monster_grønn.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>26 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(3)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Monster <br>(Rosa)</h2>
+                    <img id="rosa" src="./bilder/monster_rosa.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>26 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(4)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Monster <br>(Pipeline punch)</h2>
+                    <img src="./bilder/monster_punch.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>26 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(5)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Redbull <br>(Vanlig)</h2>
+                    <img id="redbull" src="./bilder/redbull_vanlig.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>22 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(6)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Redbull <br>(Gul)</h2>
+                    <img id="redbull" src="./bilder/redbull_gul.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>22 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(7)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Redbull <br>(Rød)</h2>
+                    <img id="redbull_rød" src="./bilder/redbull_rød.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>22 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(8)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Nudler <br>(Kylling)</h2>
+                    <img src="./bilder/Nudler_kylling.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>24 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(9)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Nudler <br>(Kjøtt)</h2>
+                    <img src="./bilder/Nudler_kjøtt.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>24 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(10)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_hoved">
+                    <h2>Fruktsmak</h2>
+                    <img id="fruktsmak" src="./bilder/fruktsmak.png">
+                </div>
+                <div class="sidemeny">
+                    <div class="pris">
+                        <h4>Pris:</h4>
+                        <p>18 kr</p>
+                    </div>
+                    <button type="button" onclick="leggTilHandlekurv(11)" class="kjøpeknapp"><img src="./bilder/handle_kurv_ikon.png"></button>
+                </div>
+            </div>
+            <!-- Repeat the structure for other items -->
+        </div>
+    </div>
+
+    <div class="bunn">
+        <h2 id="overskrift">Hvordan kontakte oss</h2>
+        <div class="info">
+            <h4>Tlf "Leveranse personell": +47 459 18 169</h4>
+            <h4>Tlf "Billigkroken fra wish": +47 949 82 606</h4>
+            <h4>Tlf "IT-support": +47 948 92 440</h4>
+        </div>
+    </div>
+
+    <script src="./script.js">
+    </script>
+</body>
+</html>
